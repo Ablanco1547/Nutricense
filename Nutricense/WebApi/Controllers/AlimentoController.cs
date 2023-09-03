@@ -13,7 +13,7 @@ namespace WebApi.Controllers
     {
         [HttpGet]
 
-        [Route("retrieveAll")]
+        [Route("RetrieveAll")]
         public async Task<IActionResult> RetrieveAll()
         {
             try

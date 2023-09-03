@@ -1,0 +1,53 @@
+﻿body {
+    white-space:normal
+    overflow: hidden;
+}
+#contenedorAlimentos{
+    margin: 40px;
+    text-align: center;
+}
+#contenedorInputBusqueda {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: center;
+    margin: 40px;
+}
+    #contenedorInputBusqueda i{
+        margin: 10px;
+        font-size: 19px;
+        align-self: center;
+
+    }
+#busquedaAlimentoInput {
+    width: 70%;
+    display: inline;
+    border: 1px solid #888;
+}
+
+
+#tblAlimentos {
+    text-align: center;
+}
+
+    #tblAlimentos td {
+        width: 25%;
+        max-width: 25%;
+    }
+
+ #tblAlimentos thead {
+    background-color: #78c2ad;
+    color:white;
+    padding: 15px;
+}
+#tblAlimentos thead th{
+
+    padding: 15px !important;
+}
+
+
+
+#tableBodyAlimentos tr:nth-child(even) {
+    background-color: #e4f3ef;
+}
+

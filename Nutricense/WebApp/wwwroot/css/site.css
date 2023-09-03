@@ -16,3 +16,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.navbar-nav {
+ width:auto!important
+}
+
+.navbar-nav{
+    margin: auto;
+    width:auto;
+}
