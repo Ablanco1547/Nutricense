@@ -10,6 +10,8 @@
 
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <script src="~/js/controlactions.js"></script>
 
@@ -27,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" asp-page="/Index">
                                 Inicio
                                 <span class="visually-hidden">(current)</span>
                             </a>
@@ -36,7 +38,7 @@
                             <a class="nav-link" asp-page="/GrupoAlimentos">Grupo de alimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-page="#">Evaluación nutricional</a>
+                            <a class="nav-link" asp-page="/EvaluacionNutricional">Evaluación nutricional</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-page="#">Información nutricional</a>
