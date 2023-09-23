@@ -1,4 +1,5 @@
-﻿using DTOs;
+﻿using Core;
+using DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
@@ -21,7 +22,7 @@ namespace WebApi.Controllers
             try
             {
                 var cm = new ClienteManager();
-                cm.Create(evento);
+                cm.Create(cliente);
 
                 return Ok(cliente);
             }catch (Exception ex)

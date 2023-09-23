@@ -93,11 +93,6 @@ function ControlActions() {
 			dataType: "json",
 			success: function (data) {
 				if (callBackFunction) {
-					Swal.fire(
-						'Good job!',
-						'Transaction completed!',
-						'success'
-					)
 					callBackFunction(data);
 				}
 			},
@@ -115,7 +110,7 @@ function ControlActions() {
 					icon: 'error',
 					title: 'Oops...',
 					html: message,
-					footer: 'CenfoChat Client'
+					footer: 'Nutricense'
 				})
 			}
 		});

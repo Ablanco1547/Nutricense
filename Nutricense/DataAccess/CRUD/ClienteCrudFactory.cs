@@ -1,5 +1,7 @@
 ﻿using DataAccess.DAO;
+using DataAccess.Mapper;
 using DTOs;
+using NPOI.SS.Formula.Functions;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
@@ -15,13 +17,24 @@ namespace DataAccess.CRUD
 
         public ClienteCrudFactory()
         {
-            _dao = SqlDao.getInstance();
+            _dao = SqlDao.GetInstance();
             _mapper = new ClienteMapper();
         }
 
         public override void Create(BaseDTO dto)
         {
-            throw new NotImplementedException();
+
+
+            var cliente = (Cliente)dto;
+            //Buscamos el sql operation a utilizar para crear el registro en DB
+
+            var sqlOperation = _mapper.GetCreateStatement(cliente);
+
+            //Le indicamos al dao que ejecute la operacion
+
+             _dao.ExecuteProcedure(sqlOperation);
+
+
         }
 
         public override void Delete(BaseDTO dto)

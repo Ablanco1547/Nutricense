@@ -1,11 +1,26 @@
 
 function EvaluacionController() {
+    this.ApiService = "Cliente";
     this.InitView = function () {
 
         let btnCalcular = document.querySelector('#btnCalculo');
 
-
         btnCalcular.addEventListener('click', () => {
+
+            let objCliente = {};
+
+            objCliente.Correo = document.querySelector('#inputCorreo').value;
+            objCliente.Nombre = document.querySelector('#inputNombre').value;
+            objCliente.Apellidos = document.querySelector('#inputApellidos').value;
+            objCliente.Sexo = document.querySelector('#sexoSelect').value;
+            objCliente.Peso = document.querySelector('#inputPeso').value;
+            objCliente.Talla = document.querySelector('#inputTalla').value;
+            objCliente.Edad = document.querySelector('#inputEdad').value;
+            objCliente.ActividadFisica = document.querySelector('#actividadFisicaSelect').value;
+
+
+
+
             let camposAValidar = document.querySelectorAll('input');
             let selectsAValidar = document.querySelectorAll('select');
             let emailAValidar = document.querySelector('#inputCorreo');
@@ -31,11 +46,8 @@ function EvaluacionController() {
                     showCloseButton: true
                 });
             } else {
-                Swal.fire({
-                    title: 'Resultado:',
-                    text: 'Aqui va todo el resultado',
-                    showCloseButton: true
-                });
+
+                this.crearCliente(objCliente)
             }
 
 
@@ -91,6 +103,31 @@ function EvaluacionController() {
         return validado;
 
     }
+
+    this.crearCliente = (pObjetoCliente) => {
+
+        var ctrlActions = new ControlActions();
+        var serviceToCreate = this.ApiService + `/Create`;
+
+        ctrlActions.PostToAPI(serviceToCreate, pObjetoCliente, function (data) {
+
+
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Se creo la vara',
+                text: 'Llenar todos los campos',
+                showCloseButton: true
+            });
+            
+            console.log(data);
+
+        })
+
+
+    }
+
+
 }
 
 
