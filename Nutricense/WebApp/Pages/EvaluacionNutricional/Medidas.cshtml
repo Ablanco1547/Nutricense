@@ -1,0 +1,60 @@
+﻿@page
+@model WebApp.Pages.EvaluacionNutricional.MedidasModel
+@{
+}
+
+<link href="~/css/evaluacionnutricional.css" rel="stylesheet" />
+<script src="~/js/medidas.js"></script>
+
+
+<div class="contenedorEvaluacion">
+    <h1>Evaluación nutricional</h1>
+    <legend>Ingrese sus datos</legend>
+    <form class="datosPersonales" class="form-group">
+
+        <div class="columnContainer">
+            <label for="inputPeso" class="form-label mt-4">Peso (kg) </label>
+            <div class="input-group ">
+                <input type="number" min="20" max="650" class="form-control" id="inputPeso" aria-describedby="emailHelp" placeholder="Ingrese su peso completo en kilogramos aquí">
+                <span class="input-group-text">kg</span>
+            </div>
+            <label for="inputTalla" class="form-label mt-4">Estatura (cm) </label>
+            <div class="input-group ">
+                <input type="number" min="100" max="300" class="form-control" id="inputTalla" aria-describedby="emailHelp" placeholder="Ingrese su estatura en centímetros aquí">
+                <span class="input-group-text">cm</span>
+            </div>
+
+
+        </div>
+
+        <div class="columnContainer">
+
+            <label for="sexoSelect" class="form-label mt-4">Sexo</label>
+            <select class="form-select" id="sexoSelect">
+                <option disabled selected value="">Seleccione su sexo al nacer</option>
+                <option value="Mujer">Mujer</option>
+                <option value="Hombre">Hombre</option>
+
+            </select>
+
+
+            <label for="actividadFisicaSelect" class="form-label mt-4">Actividad física</label>
+            <select class="form-select" id="actividadFisicaSelect">
+                <option disabled selected value="">Seleccione su tipo de actividad física</option>
+                <option value="Sedentario">Sedentario</option>
+                <option value="ActividadFisica">Actividad física regular</option>
+
+            </select>
+
+        </div>
+
+
+
+    </form>
+
+    <button type="button" class="btn btn-secondary btnCalculo" id="btnVolver">Volver</button>
+    <button type="button" class="btn btn-primary btnCalculo" id="btnCalcular">Calcular</button>
+
+
+
+</div>

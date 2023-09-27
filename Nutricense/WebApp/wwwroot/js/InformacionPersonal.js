@@ -3,20 +3,33 @@ function EvaluacionController() {
     this.ApiService = "Cliente";
     this.InitView = function () {
 
-        let btnCalcular = document.querySelector('#btnCalculo');
 
-        btnCalcular.addEventListener('click', () => {
+        const objStorage = JSON.parse(localStorage.getItem('objnosuscrito'));
+        const correoInput = document.querySelector('#inputCorreo');
+        const nombreInput = document.querySelector('#inputNombre');
+        const apellidosInput = document.querySelector('#inputApellidos');
+        const edadInput = document.querySelector('#inputEdad');
+
+
+        if (objStorage !== null) {
+            correoInput.value = objStorage.Correo;
+            nombreInput.value = objStorage.Nombre;
+            apellidosInput.value = objStorage.Apellidos;
+            edadInput.value = objStorage.Edad;
+            
+        }
+
+        let btnSiguiente = document.querySelector('#btnSiguiente');
+
+        btnSiguiente.addEventListener('click', () => {
 
             let objCliente = {};
 
-            objCliente.Correo = document.querySelector('#inputCorreo').value;
-            objCliente.Nombre = document.querySelector('#inputNombre').value;
-            objCliente.Apellidos = document.querySelector('#inputApellidos').value;
-            objCliente.Sexo = document.querySelector('#sexoSelect').value;
-            objCliente.Peso = document.querySelector('#inputPeso').value;
-            objCliente.Talla = document.querySelector('#inputTalla').value;
-            objCliente.Edad = document.querySelector('#inputEdad').value;
-            objCliente.ActividadFisica = document.querySelector('#actividadFisicaSelect').value;
+            objCliente.Correo = correoInput.value;
+            objCliente.Nombre = nombreInput.value;
+            objCliente.Apellidos = apellidosInput.value;
+            objCliente.Edad = edadInput.value;
+           
 
 
 
@@ -46,8 +59,10 @@ function EvaluacionController() {
                     showCloseButton: true
                 });
             } else {
+                localStorage.setItem('objnosuscrito', JSON.stringify(objCliente))
 
-                this.crearCliente(objCliente)
+                window.location.href = "medidas";
+
             }
 
 
@@ -58,6 +73,7 @@ function EvaluacionController() {
         })
 
     }
+
 
     this.validarVacios = (campos) => {
         let validado = false;
@@ -101,29 +117,6 @@ function EvaluacionController() {
         }
 
         return validado;
-
-    }
-
-    this.crearCliente = (pObjetoCliente) => {
-
-        var ctrlActions = new ControlActions();
-        var serviceToCreate = this.ApiService + `/Create`;
-
-        ctrlActions.PostToAPI(serviceToCreate, pObjetoCliente, function (data) {
-
-
-
-            Swal.fire({
-                icon: 'success',
-                title: 'Se creo la vara',
-                text: 'Llenar todos los campos',
-                showCloseButton: true
-            });
-            
-            console.log(data);
-
-        })
-
 
     }
 

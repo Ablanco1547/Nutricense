@@ -26,7 +26,7 @@ namespace DataAccess.Mapper
             sqlOperation.AddVarcharParam("P_SEXO", cliente.Sexo);
             sqlOperation.AddVarcharParam("P_DIRECCION","Costa Rica");
             sqlOperation.AddVarcharParam("P_APELLIDOS", cliente.Apellidos);
-
+            sqlOperation.AddIntParam("P_EDAD", cliente.Edad);
 
             return sqlOperation;
         }
@@ -49,7 +49,8 @@ namespace DataAccess.Mapper
                 Sexo = (string)row["Sexo"],
                 Direccion = (string)row["Direccion"],
                 Apellidos = (string)row["Apellidos"],
-                FechaRegistro = (DateTime)row["FechaRegistro"]
+                FechaRegistro = (DateTime)row["FechaRegistro"],
+                Edad = (int)row["Edad"]
             };
 
 

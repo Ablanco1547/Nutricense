@@ -1,7 +1,7 @@
 ﻿body {
 }
 
-#contenedorEvaluacion {
+.contenedorEvaluacion {
     margin: 40px;
     text-align: center;
     //background-color: #e4f3ef;
@@ -9,14 +9,14 @@
     border-radius: 20px
 }
 
-#datosPersonales {
+.datosPersonales {
     text-align: left;
     display: flex;
     flex-direction: row;
-    gap:30px;
+    gap: 30px;
 }
 
-    #datosPersonales label {
+    .datosPersonales label{
         color: #5a5a5a;
     }
 
@@ -26,7 +26,7 @@
         width: 50%;
     }
 
-#datosPersonales input, .form-select {
+.datosPersonales input, .form-select {
     max-width: 555px;
     height: 38px;
     border: 1px solid #5a5a5a;
@@ -37,7 +37,7 @@
     border: 1px solid #5a5a5a;
 }
 
-#btnCalculo{
+.btnCalculo{
     margin:40px;
 }
 
