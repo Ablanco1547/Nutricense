@@ -6,7 +6,10 @@ function EvaluacionController() {
         const btnCalcular = document.querySelector('#btnCalcular');
 
         const btnVolver = document.querySelector('#btnVolver');
-        
+
+        const inputCircMunneca = document.querySelector('#inputCircMunneca');
+
+        inputCircMunneca.value = 0;
         btnCalcular.addEventListener('click', () => {
 
             let objCliente = JSON.parse(localStorage.getItem('objnosuscrito'));
@@ -42,11 +45,11 @@ function EvaluacionController() {
 
 
                 if (objCliente.Edad >= 20 && objCliente.Edad < 65) {
-                    objCliente.estadoIMC = this.comparacionIMCAdulto(objCliente.IMC);
+                    objCliente.EstadoIMC = this.comparacionIMCAdulto(objCliente.IMC);
                 } else if (objCliente.Edad >= 65) {
-                    objCliente.estadoIMC = this.comparacionIMCAdultoMayor(objCliente.IMC);
+                    objCliente.EstadoIMC = this.comparacionIMCAdultoMayor(objCliente.IMC);
                 } else {
-                    objCliente.estadoIMC = "Compare con la hoja de curvas de la CCSS"
+                    objCliente.EstadoIMC = "Compare con la hoja de curvas de la CCSS"
                 }
 
 
@@ -58,8 +61,42 @@ function EvaluacionController() {
                     objCliente.ValorSexoMif = parseInt(-161);
                 }
 
-                objCliente.TmbMifflin = this.calcularTMBMifflin(objCliente.Peso, objCliente.Talla, objCliente.Edad, objCliente.ValorSexoMif).toFixed(0)
 
+
+
+                if (objCliente.ActividadFisica == "Sedentario") {
+                    objCliente.ValorVET = 1.4;
+                } else if (objCliente.ActividadFisica == "ActividadFisica") {
+                    objCliente.ValorVET = 1.5;
+                }
+
+
+                if (inputCircMunneca.value > 6) {
+                    let calculoComposicion = this.calcularComposicionCorporal(objCliente.Talla, inputCircMunneca.value);
+
+                    objCliente.Composicion = this.compararComposicionSexo(calculoComposicion, objCliente.Sexo);
+
+                } else {
+                    objCliente.Composicion = 'Mediana';
+
+                }
+
+                objCliente.PesoIdealImc = parseInt(this.calcularIMCIdeal(objCliente.Composicion, objCliente.TallaMts).toFixed(1))
+
+                if (objCliente.EstadoIMC == 'Obesidad 2' || objCliente.EstadoIMC == 'Obesidad 3') {
+                    objCliente.PesoIdealImcAjust = this.calcularIMCAjustado(objCliente.Peso, objCliente.PesoIdealImc)
+
+                    objCliente.TmbMifflin = parseInt(this.calcularTMBMifflin(objCliente.PesoIdealImcAjust, objCliente.Talla, objCliente.Edad, objCliente.ValorSexoMif)).toFixed(0)
+
+
+                } else {
+
+                    objCliente.TmbMifflin = parseInt(this.calcularTMBMifflin(objCliente.Peso, objCliente.Talla, objCliente.Edad, objCliente.ValorSexoMif)).toFixed(0)
+
+
+
+                }
+                objCliente.VetMifflin = this.calcularVETMifflin(objCliente.TmbMifflin, objCliente.ValorVET).toFixed(0);
 
 
 
@@ -235,6 +272,10 @@ function EvaluacionController() {
     }
 
 
+    this.calcularVETMifflin = (PTmbMifflin, PValorVET) => {
+        return (PTmbMifflin * PValorVET);
+    };
+
 
     this.calcularTMBMifflin = (pPeso, pTallaCm, pEdad, pValorSexoMif) => {
         return (10 * pPeso) + (6.25 * pTallaCm) - (5 * pEdad) + pValorSexoMif;
@@ -244,7 +285,70 @@ function EvaluacionController() {
 
 
 
+    this.calcularComposicionCorporal = (pEstaturaCm, pCircunferenciaMunneca) => {
+        let calculoComposicionCorporal = (pEstaturaCm / pCircunferenciaMunneca);
 
+        return calculoComposicionCorporal;
+    };
+
+
+    this.compararComposicionSexo = (pCalculoComposicion, pSexo) => {
+        if (pSexo == "Mujer") {
+            composicionMujer = this.interpretarComposicionMujer(pCalculoComposicion);
+            return composicionMujer;
+        } else if (pSexo == "Hombre") {
+            composicionHombre = this.interpretarComposicionHombre(pCalculoComposicion);
+            return composicionHombre;
+        }
+    };
+
+
+
+
+    this.interpretarComposicionMujer = (pCalculoComposicion) => {
+        if (pCalculoComposicion > 11) {
+            return "Pequeña"
+        } else if (pCalculoComposicion > 10 && pCalculoComposicion <= 11) {
+            return "Mediana"
+        } else if (pCalculoComposicion <= 10) {
+            return "Grande"
+        }
+    };
+
+    this.interpretarComposicionHombre = (pCalculoComposicion) => {
+        if (pCalculoComposicion > 10.4) {
+            return "Pequeña"
+        } else if (pCalculoComposicion > 9.6 && pCalculoComposicion <= 10.4) {
+            return "Mediana"
+        } else if (pCalculoComposicion <= 9.6) {
+            return "Grande"
+        }
+    };
+
+
+    this.calcularIMCIdeal = (pComposicion, pEstaturaMts) => {
+        let calculo
+        switch (pComposicion) {
+            case "Grande":
+                calculo = Math.pow(pEstaturaMts, 2)
+                return 25 * calculo;
+                break;
+            case "Mediana":
+                calculo = Math.pow(pEstaturaMts, 2)
+                return 22.5 * calculo;
+                break;
+            case "Pequeña":
+                calculo = Math.pow(pEstaturaMts, 2)
+                return 20 * calculo;
+                break;
+        }
+    }
+
+    this.calcularIMCAjustado = (pPeso, pResultadoIMCIdeal) => {
+
+        return (((pPeso - pResultadoIMCIdeal) / 4) + pResultadoIMCIdeal);
+
+    }
 
 
 }
