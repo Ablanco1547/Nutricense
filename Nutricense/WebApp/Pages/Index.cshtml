@@ -3,8 +3,84 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<link href="~/css/index.css" rel="stylesheet" />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="containerPagina">
+
+
+
+
+<div class="text-center" id="tituloIndex">
+    <h1 id="tituloPagina">NUTRICENSE</h1>
+    <h5>Tu solucion nutricional al alcance.</h5>
+
+</div>
+
+<section>
+
+        <h2> Que hacemos?</h2>
+
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+
+        </p>
+
+        <div id="cardsContenedor">
+    <div id="cardEvaluacion" class="indexCard">
+        <h2>Evaluación nutricional</h2>
+
+        <p>Aqui va el texto descriptivo de la vara de la vara</p>
+
+
+        <a class="btn btn-info" asp-page="/EvaluacionNutricional/InformacionPersonal">Evaluación nutricional</a>
+
+
+    </div>
+
+    <div id="cardAlimentos" class="indexCard">
+        <h2>Buscador de alimentos</h2>
+
+        <p>Aqui va el texto descriptivo de la vara de la vara</p>
+
+
+        <a class="btn btn-info" asp-page="/GrupoAlimentos">Grupo de alimentos</a>
+
+
+    </div>
+
+            <div id="cardAlimentos" class="indexCard">
+                <h2>Buscador de alimentos</h2>
+
+                <p>Aqui va el texto descriptivo de la vara de la vara</p>
+
+
+                <a class="btn btn-info" asp-page="/GrupoAlimentos">Grupo de alimentos</a>
+
+
+            </div>
+
+            <div id="cardEvaluacion" class="indexCard">
+                <h2>Evaluación nutricional</h2>
+
+                <p>Aqui va el texto descriptivo de la vara de la vara</p>
+
+
+                <a class="btn btn-info" asp-page="/EvaluacionNutricional/InformacionPersonal">Evaluación nutricional</a>
+
+
+            </div>
+
+        </div>
+
+</section>
+
+<section>
+    <h2>Aqui va el video explicativo</h2>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eJiL_Y0sZu4?si=tO6uGvGhJr_9slo5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+
 </div>
