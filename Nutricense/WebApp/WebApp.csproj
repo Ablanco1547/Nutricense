@@ -10,4 +10,8 @@
     <Folder Include="Media\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\media\bigstock-Health-food-selection-super-foods-fruits-veggies.jpg" />
+  </ItemGroup>
+
 </Project>
