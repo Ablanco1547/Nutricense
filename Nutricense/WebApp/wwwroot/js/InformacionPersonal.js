@@ -60,7 +60,7 @@ function EvaluacionController() {
                 });
             } else {
                 localStorage.setItem('objnosuscrito', JSON.stringify(objCliente))
-
+                sessionStorage.setItem('evaluacionAccess',true)
                 window.location.href = "medidas";
 
             }

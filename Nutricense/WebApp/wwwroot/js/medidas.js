@@ -1,4 +1,8 @@
+let evaluacionAccess = sessionStorage.getItem('evaluacionAccess');
 
+if (evaluacionAccess === "false") {
+    window.location.href = "/EvaluacionNutricional/InformacionPersonal"
+}
 function EvaluacionController() {
     this.ApiService = "Cliente";
     this.InitView = function () {
@@ -184,7 +188,7 @@ function EvaluacionController() {
             localStorage.setItem('objresultado', JSON.stringify(pObjetoCliente))
 
 
-
+            sessionStorage.setItem('evaluacionAccess', "trueResult")
             window.location.href = 'Resultados';
 
 
@@ -358,6 +362,10 @@ function EvaluacionController() {
 
 
 $(document).ready(function () {
+
+
+
+
     var view = new EvaluacionController();
     view.InitView();
 

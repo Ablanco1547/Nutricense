@@ -6,15 +6,37 @@
 <link href="~/css/evaluacionnutricional.css" rel="stylesheet" />
 <script src="~/js/resultados.js"></script>
 
-<div>
+<section class="contenedorResultado">
 
 
     <h1>
-        AquiResultados
+        Resultados
     </h1>
 
-    <table id="tblResultados">
+    <div id="contenedorTabla">
+        <h2 id="nombreCliente">Aqui estan sus resultados</h2>
+
+        <p>Información nutricional</p>
+        <table id="tblResultados">
+
+            <tr>
+                <td class="tblTitulo">IMC</td>
+                <td class="tblResultado" id="resultadoIMC"></td>
+                <td class="tblProp" id="estadoIMC"></td>
+            </tr>
+            <tr>
+                <td class="tblTitulo">Peso ideal</td>
+                <td class="tblResultado"  id="resultadoPesoIdeal"></td>
+                <td class="tblProp">Kg</td>
+            </tr>
+            <tr>
+                <td class="tblTitulo">Requerimiento calórico</td>
+                <td class="tblResultado"  id="resultadoRequerimiento"></td>
+                <td class="tblProp" >Calorías</td>
+            </tr>
 
 
-    </table>
-</div>
+        </table>
+        <a id="btnVolver" style=" width:100px;         margin: auto; " class="btn btn-primary" asp-page="/EvaluacionNutricional/InformacionPersonal">Volver</a>
+    </div>
+</section>

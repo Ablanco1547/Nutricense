@@ -6,7 +6,7 @@
     text-align: center;
     //background-color: #e4f3ef;
     padding: 0px 40px;
-    border-radius: 20px
+    border-radius: 20px;
 }
 
 .datosPersonales {
@@ -43,4 +43,62 @@
 
 .is-invalid {
    border-color: #ff7851 !important;
+}
+
+.contenedorResultado {
+
+    max-width: 900px;
+    margin: auto;
+    margin-top:40px;
+    text-align: center;
+    padding: 0px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+.tblTitulo {
+    line-height:0.9;
+    font-weight:500;
+    text-align:end;
+    width:340px;
+    padding-right:30px
+
+}
+.tblProp {
+    text-align: start;
+    width: 340px;
+    padding-left: 30px
+}
+
+#tblResultados {
+    line-height: 2;
+    margin: auto;
+    color: #5a5a5a;
+    font-size: 25px;
+}
+
+#estadoIMC {
+    line-height: 1;
+}
+
+
+#contenedorTabla {
+    background-color: rgba(0,0,0,.075);
+    border-radius: 10px;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+    #contenedorTabla h2 {
+        color: #133C44;
+        font-weight:600;
+
+    }
+
+#contenedorTabla p{
+    margin:-10px 0px;
 }

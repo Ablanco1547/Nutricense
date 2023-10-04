@@ -1,7 +1,9 @@
 ﻿body {
-    white-space:normal;
-    overflow: hidden;
+    white-space: normal;
+    scrollbar-gutter: stable;
 }
+
+
 #contenedorAlimentos{
     margin: 40px;
     text-align: center;
