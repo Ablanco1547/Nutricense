@@ -13,7 +13,8 @@
     flex-direction: row;
     width: 100%;
     align-content: center;
-    margin: 40px;
+    margin-top: 10px;
+    margin-bottom:-30px;
 }
     #contenedorInputBusqueda i{
         margin: 10px;
@@ -30,11 +31,14 @@
 
 #tblAlimentos {
     text-align: center;
+    margin-bottom:20px;
+
 }
 
     #tblAlimentos td {
         width: 25%;
         max-width: 25%;
+
     }
 
  #tblAlimentos thead {
@@ -52,4 +56,11 @@
 #tableBodyAlimentos tr:nth-child(even) {
     background-color: #e4f3ef;
 }
+#tableBodyAlimentos tr:nth-child(odd) {
+    background-color: white;
+}
 
+
+.contenedorFormDatos{
+    padding: 50px;
+}

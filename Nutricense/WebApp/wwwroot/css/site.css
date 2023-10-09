@@ -25,3 +25,30 @@ body {
     margin: auto;
     width:auto;
 }
+
+
+.contenedorFormDatos {
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contenedorFormDatos button{
+    margin: auto;
+}
+
+.contenedorFormDatos p{
+    margin:-40px;
+}
+
+.grupoBotonesForm{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    margin: auto
+}

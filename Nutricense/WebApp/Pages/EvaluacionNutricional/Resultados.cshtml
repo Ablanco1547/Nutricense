@@ -12,31 +12,38 @@
     <h1>
         Resultados
     </h1>
+    <p>Resultados de tu evaluacion nutricional</p>
 
-    <div id="contenedorTabla">
+
+    <div id="contenedorTabla" class="contenedorFormDatos">
         <h2 id="nombreCliente">Aqui estan sus resultados</h2>
+
+
+
 
         <p>Información nutricional</p>
         <table id="tblResultados">
 
             <tr>
-                <td class="tblTitulo">IMC</td>
+                <td class="tblTitulo">IMC: </td>
                 <td class="tblResultado" id="resultadoIMC"></td>
                 <td class="tblProp" id="estadoIMC"></td>
             </tr>
             <tr>
-                <td class="tblTitulo">Peso ideal</td>
+                <td class="tblTitulo">Peso ideal: </td>
                 <td class="tblResultado"  id="resultadoPesoIdeal"></td>
                 <td class="tblProp">Kg</td>
             </tr>
             <tr>
-                <td class="tblTitulo">Requerimiento calórico</td>
+                <td class="tblTitulo">Requerimiento calórico: </td>
                 <td class="tblResultado"  id="resultadoRequerimiento"></td>
-                <td class="tblProp" >Calorías</td>
+                <td class="tblProp">kcal</td>
             </tr>
 
 
         </table>
         <a id="btnVolver" style=" width:100px;         margin: auto; " class="btn btn-primary" asp-page="/EvaluacionNutricional/InformacionPersonal">Volver</a>
+
+    
     </div>
 </section>

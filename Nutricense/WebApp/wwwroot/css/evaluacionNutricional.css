@@ -9,12 +9,21 @@
     border-radius: 20px;
 }
 
+.contenedorEvaluacion h4{
+    margin-top: 20px;
+}
+
+
+
 .datosPersonales {
     text-align: left;
     display: flex;
     flex-direction: row;
     gap: 30px;
+
 }
+
+
 
     .datosPersonales label{
         color: #5a5a5a;
@@ -54,7 +63,7 @@
     padding: 0px 40px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    /*gap: 40px;*/
 
 }
 .tblTitulo {
@@ -62,13 +71,13 @@
     font-weight:500;
     text-align:end;
     width:340px;
-    padding-right:30px
+    padding-right:10px
 
 }
 .tblProp {
     text-align: start;
     width: 340px;
-    padding-left: 30px
+    padding-left: 0px
 }
 
 #tblResultados {
@@ -83,7 +92,7 @@
 }
 
 
-#contenedorTabla {
+/*#contenedorTabla {
     background-color: rgba(0,0,0,.075);
     border-radius: 10px;
     padding: 50px 0px;
@@ -101,4 +110,9 @@
 
 #contenedorTabla p{
     margin:-10px 0px;
+}*/
+
+#tblResultados tr {
+    padding: 10px;
+    border-bottom: 1px solid #c2c2c2;
 }

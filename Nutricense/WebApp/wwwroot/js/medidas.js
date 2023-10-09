@@ -93,7 +93,10 @@ function EvaluacionController() {
                     objCliente.TmbMifflin = parseInt(this.calcularTMBMifflin(objCliente.PesoIdealImcAjust, objCliente.Talla, objCliente.Edad, objCliente.ValorSexoMif)).toFixed(0)
 
 
-                } else {
+                } else if (objCliente.EstadoIMC == 'Obesidad 1' || objCliente.EstadoIMC == 'Sobrepeso' || objCliente.EstadoIMC == 'Peso bajo 1' || objCliente.EstadoIMC == 'Peso bajo 2') {
+                    objCliente.TmbMifflin = parseInt(this.calcularTMBMifflin(objCliente.PesoIdealImc, objCliente.Talla, objCliente.Edad, objCliente.ValorSexoMif)).toFixed(0)
+
+                } else if (objCliente.EstadoIMC == 'Normal' || objCliente.EstadoIMC == 'Peso bajo 3') {
 
                     objCliente.TmbMifflin = parseInt(this.calcularTMBMifflin(objCliente.Peso, objCliente.Talla, objCliente.Edad, objCliente.ValorSexoMif)).toFixed(0)
 
@@ -103,8 +106,6 @@ function EvaluacionController() {
                 objCliente.VetMifflin = this.calcularVETMifflin(objCliente.TmbMifflin, objCliente.ValorVET).toFixed(0);
 
 
-
-                console.log(objCliente)
                 this.crearCliente(objCliente)
 
             }
