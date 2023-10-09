@@ -20,8 +20,10 @@ function AlimentosController() {
 
             let arrayFiltrado = arrayRespuesta.filter((alimento => {
                 let nombre = alimento.nombre.toLowerCase();
-                let input = busquedaAlimentoInput.value.toLowerCase()
-                return nombre.includes(input)
+                let grupo = alimento.grupoAlimenticio.toLowerCase();
+                let input = busquedaAlimentoInput.value.toLowerCase();
+
+                return nombre.includes(input) + grupo.includes(input);
             }))
 
             llenarTabla(arrayFiltrado)
@@ -50,33 +52,7 @@ function AlimentosController() {
 
 
 
-      /*
-//VER CLASE Y ARREGLAR ESTA PICHA
-    this.loadTable = function () {
-        var ctrlActions = new ControlActions();
 
-        //Ruta para extraer la data del API
-        var urlService = ctrlActions.GetUrlApiService(this.ApiService + "/RetrieveAll");
-        //definir columnas de extraccion del JSON de la tabla (los nombres deben ser iguales al json)
-        var columns = [
-            columns[0] = { data: "id" },
-            columns[1] = { data: "nombre" },
-            columns[2] = { data: "grupoAlimenticio" },
-            columns[3] = { data: "tamannoPorcion" },
-            columns[4] = { data: 'fuenteFibra' }
-        ]
-
-        //Por medio de Jquery convertimos la tabla normal en un datatable
-        $('#tblAlimentos').dataTable({
-            "ajax": {
-                "url": urlService,
-                "dataSrc": "",
-            },
-            "columns": columns
-        });
-
-
-    }*/
 }
 llenarTabla = function (arrayDatos) {
     let tableBody = tableBodyAlimentos;
