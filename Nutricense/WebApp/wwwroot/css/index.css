@@ -49,14 +49,16 @@
         color: #133C44;
     }
 
-    #cardAlimentos {
-        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6) ), url('../media/bigstock-Health-food-selection-super-foods-fruits-veggies.jpg');
-        background-position: center;
-    }
+#cardAlimentos {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6) ), url('../media/grupoAlimentos.jpg');
+    background-position: center;
+    background-size:cover;
+}
 
 #cardEvaluacion {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6) ), url('../media/Nutrition_share.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6) ), url('../media/evaluacionNutricional.jpg');
     background-position: center;
+    background-size:contain;
 }
 
 
