@@ -1,0 +1,61 @@
+﻿@page
+@model WebApp.Pages.EducacionNutricionalModel
+@{
+}
+<link href="~/css/educacionnutricional.css" rel="stylesheet" />
+<section id="contenedorEducacion">
+    <h1>Educación nutricional</h1>
+    <p>En esta sección vas a tener articulos de interés nutricional para tu aprendizaje</p>
+
+
+
+    <!--
+    iframe
+    <iframe style="border: 0" width="800" height="600" src="/media/pdf/grupoAlimentos.pdf"></iframe>
+    -->
+
+
+    <div id="grupoAlimentosMdl" class="contenedorModal" >
+        <div class="contenidoModal">
+
+            <iframe style="border: 0" width="800" height="600" src="/media/pdf/grupoAlimentos.pdf"></iframe>
+
+
+        </div>
+
+    </div>
+
+    <div id="beneficiosMdl" class="contenedorModal">
+        <div class="contenidoModal">
+
+            <iframe style="border: 0" width="800" height="600" src="/media/pdf/beneficiosEjercicio.pdf"></iframe>
+
+
+        </div>
+
+    </div>
+
+    <div id="recomendacionesMdl" class="contenedorModal">
+        <div class="contenidoModal">
+
+            <iframe style="border: 0" width="800" height="600" src="/media/pdf/recomendacionDiaraFibra.pdf"></iframe>
+
+
+        </div>
+
+    </div>
+
+    <button type="button" id="grupoAlimentosBtn" class="btn btn-primary">grupo de alimentos</button>
+    <br />
+
+    <button type="button" id="beneficiosBtn" class="btn btn-primary">beneficios ejercicio</button>
+    <br />
+
+    <button type="button" id="recomendacionesBtn" class="btn btn-primary">recomendaciones fibra</button>
+</section>
+
+
+
+
+
+<script src="~/js/educacionnutricional.js"></script>
