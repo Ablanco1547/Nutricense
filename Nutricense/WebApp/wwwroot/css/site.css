@@ -1,3 +1,11 @@
+:root {
+    --verdePrimario: #78C2AD;
+    --verdeSecundario: #b8dfd4;
+    --grisFondoBloque: #f4f4f4;
+}
+
+
+
 html {
   font-size: 14px;
 }
