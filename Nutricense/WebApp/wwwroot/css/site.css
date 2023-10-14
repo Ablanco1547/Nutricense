@@ -60,3 +60,21 @@ body {
     width: 300px;
     margin: auto
 }
+
+
+
+.cabezaPagina {
+    background-color: var(--verdeSecundario);
+    width: 100%;
+    margin: 0px;
+    padding: 40px;
+
+}
+
+.cabezaPagina h5{
+    margin:0px;
+}
+.cabezaPagina h1{
+    margin:0px;
+}
+

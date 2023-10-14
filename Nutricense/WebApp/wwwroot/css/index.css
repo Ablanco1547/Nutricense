@@ -1,27 +1,30 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,400;1,500;1,600&display=swap');
+:root {
+    --verdePrimario: #78C2AD;
+    --verdeSecundario: #b8dfd4;
+    --grisFondoBloque: #f4f4f4;
+}
+
+
+
 
 #tituloPagina {
-    margin-top:50px;
     font-family: 'Montserrat', sans-serif;
     font-size: 4em;
-    font-weight: 500;
-    text-decoration: underline;
-    text-decoration-thickness: 5px;
-    text-decoration-color: #78C2AD;
+    font-weight: 600;
     color: #133C44;
 }
 
 
 
 
-#cardsContenedor {
 
+#cardsContenedor {
     display: flex;
     justify-content: space-around;
     height: auto;
     gap: 10px;
     flex-wrap: wrap;
-
 }
 
     #cardsContenedor h2 {
