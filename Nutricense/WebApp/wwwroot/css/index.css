@@ -150,3 +150,49 @@ body{
     background-color: var(--blanco);
     flex-direction: row-reverse;
 }
+
+@media (max-width: 1120px) {
+    #tituloPagina {
+        font-size: 46px;
+    }
+    .opcionIndexArticle {
+        background-color: var(--verdePrimario);
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+        text-align: center;
+    }
+        .opcionIndexArticle aside {
+            padding: 0px;
+            width: 100%;
+        }
+    .imgCardIndex {
+        width: 280px;
+        margin: auto;
+        display: flex;
+    }
+
+        .opcionIndexArticle h3 {
+            font-size: 20px;
+            white-space:nowrap;
+            font-weight: 600;   
+        }
+
+        .opcionIndexArticle card {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            gap: 25px;
+            max-width: 100%;
+        }
+
+        .opcionIndexArticle button {
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+    .fondoBlanco {
+        background-color: var(--blanco);
+        flex-direction: column-reverse;
+    }
+}
