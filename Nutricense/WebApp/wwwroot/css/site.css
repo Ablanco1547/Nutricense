@@ -1,14 +1,20 @@
 :root {
+    --negro: #000000;
+    --blanco: #ffffff;
     --verdePrimario: #78C2AD;
     --verdeSecundario: #b8dfd4;
     --grisFondoBloque: #f4f4f4;
+    --verdeOscuro: #133C44;
+    --montserrat: 'Montserrat', sans-serif;
+    --fondoBloque: #f4f4f4;
+    --verdeDiluido: #b3d7cc;
 }
-
-
 
 html {
   font-size: 14px;
+
 }
+
 
 @media (min-width: 768px) {
   html {
@@ -22,7 +28,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    font-family: var(--montserrat);
 }
 
 .navbar-nav {
@@ -36,14 +43,11 @@ body {
 
 
 .contenedorFormDatos {
-    margin-top: 50px;
-    padding: 30px;
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
     display: flex;
     flex-direction: column;
     gap: 50px;
+    background-color: var(--fondoBloque);
+    border-radius: 10px;
 }
 
 .contenedorFormDatos button{
@@ -51,7 +55,7 @@ body {
 }
 
 .contenedorFormDatos p{
-    margin:-40px;
+    margin:0px;
 }
 
 .grupoBotonesForm{
@@ -65,10 +69,10 @@ body {
 
 .cabezaPagina {
     background-color: var(--verdeSecundario);
+
     width: 100%;
     margin: 0px;
     padding: 40px;
-
 }
 
 .cabezaPagina h5{
@@ -77,6 +81,9 @@ body {
 .cabezaPagina h1{
     margin:0px;
 }
+    .cabezaPagina h2 {
+        font-weight: 600 !important;
 
+    }
 
 

@@ -10,33 +10,40 @@
 <script src="~/js/grupoalimentos.js"></script>
 <script src="~/js/site.js"></script>
 
+
+
+
+
+<header class="text-center cabezaPagina">
+	<h2 id="subtituloCabezaPagina" >GRUPO DE ALIMENTOS</h2>
+	<P>En esta sección puedes buscar cualquier alimento y saber a qué grupo de alimento pertenece y la equivalencia a 1 porción del alimento</P>
+
+</header>
+
 <section id="contenedorAlimentos">
 
-<h1>Grupo de alimentos</h1>
-<p>En esta sección vas a poder buscar por nombre de alimento o por grupo alimenticio para poder saber las medidas de las porciones para tu menu de dieta</p>
-
 	<div class="contenedorFormDatos">
-		<h4>Búsqueda</h4>
-	<p>Ingrese en la barra de busqueda el alimento o grupo alimenticio a buscar</p>
-<section>
+	
+	<h4>Ingrese en la barra de busqueda el alimento o grupo alimenticio a buscar</h4>
+
 	
 	
 		<div id="contenedorInputBusqueda">
-			<label for="busquedaAlimentoInput" class="col-sm-2 col-form-label">Busqueda por alimento</label>
-			<i class="fa-solid fa-magnifying-glass"></i><input id="busquedaAlimentoInput" class="form-control me-sm-2" type="search" placeholder="Escriba el nombre del alimento aqui">
+			
+<input id="busquedaAlimentoInput" class="form-control" type="search" placeholder="Escriba el nombre del alimento aqui">
 		</div>
 
-</section>
+
 
 
 <section>
 <table id="tblAlimentos" class="display" style="width:100%">
 			<thead style="width:100%">
 		<tr>
-					<th> Alimento</th>
+						<th class="topLeftBorderRadius"> Alimento</th>
 			<th> Grupo Alimenticio</th>
 			<th> Tamaño de la porción</th>
-			<th> Es Fuente de fibra</th>
+						<th class="topRightBorderRadius"> Es Fuente de fibra</th>
 		</tr>
 	</thead>
 			<tbody id="tableBodyAlimentos" style="width:100%">
