@@ -1,5 +1,17 @@
-﻿body {
+﻿:root {
+    --negro: #000000;
+    --blanco: #ffffff;
+    --verdePrimario: #78C2AD;
+    --verdeSecundario: #b8dfd4;
+    --grisFondoBloque: #f4f4f4;
+    --verdeOscuro: #133C44;
+    --montserrat: 'Montserrat', sans-serif;
+    --fondoBloque: #f4f4f4;
+    --verdeDiluido: #b3d7cc;
+    --fondoClaroTabla: #EBEBEB;
+    --fondoOscuroTabla: #D9D9D9;
 }
+
 
 .contenedorEvaluacion {
     margin: 40px;
@@ -22,6 +34,7 @@
     gap: 30px;
 
 }
+
 
 
 
@@ -102,6 +115,7 @@
 }
 
 
+
     #contenedorTabla h2 {
         color: #133C44;
         font-weight:600;
@@ -115,4 +129,12 @@
 #tblResultados tr {
     padding: 10px;
     border-bottom: 1px solid #c2c2c2;
+}
+
+#subtituloCabezaPagina, .cabezaPagina {
+    color: var(--verdeOscuro) !important;
+}
+
+.contenedorFormDatos{
+    gap: 10px;
 }
