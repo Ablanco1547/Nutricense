@@ -41,8 +41,17 @@ body {
     width: 70%;
     display: inline;
     border: 1px solid #888;
+
 }
 
+#contenedorBarraBusqueda{
+    height:200px;
+}
+
+#contenedorTabla {
+    overflow-y: scroll; /* make the table scrollable if height is more than 200 px  */
+    height: 600px;
+}
 
 #tblAlimentos {
     text-align: center;
@@ -50,25 +59,28 @@ body {
     margin-bottom: 20px;
     border-collapse: separate;
     border-spacing: 3px 5px;
-    max-width:900px;
+    max-width: 900px;
+    overflow-y: auto;
 }
 
-    #tblAlimentos td {
-        width: 25%;
-        max-width: 25%;
 
-    }
+#tblAlimentos td {
+    width: 25%;
+    max-width: 25%;
+}
 
     #tblAlimentos thead {
         background-color: var(--verdeDiluido);
         color: var(--verdeOscuro);
         padding: 15px;
-
+        position: sticky;
+        top: -20px;
     }
 
         #tblAlimentos thead th {
             padding: 15px !important;
-
+            position: sticky;
+            top: -20px;
         }
 
 
@@ -82,7 +94,6 @@ body {
 
 #tableBodyAlimentos tr {
     color: var(--negro);
-
 
 }
 
@@ -113,13 +124,15 @@ body {
     border: #133C44 1px solid;
     color: var(--negro);
     height: 38px;
-    margin-top:-40px;
+    margin-top: -40px;
+
 }
 
-.contenedorFormDatos{
+.contenedorFormDatos {
     gap: 50px;
     width: 1200px;
     margin: auto;
+
 }
 
 #subtituloCabezaPagina, .cabezaPagina {
@@ -155,12 +168,16 @@ body {
             background-color: var(--verdeDiluido);
             color: var(--verdeOscuro);
             padding: 5px;
+            position: sticky;
+            top: 0px;
         }
 
             #tblAlimentos thead th {
                 padding: 0px !important;
                 font-size: 10px;
-                word-wrap: break-word
+                word-wrap: break-word;
+                position: sticky;
+                top: 0px;
             }
 
 
@@ -276,7 +293,7 @@ body {
 
 }
 
-@media (min-width: 691px) and (max-width: 1024px) {
+@media (min-width: 691px) and (max-width: 1117px) {
     .contenedorFormDatos {
         gap: 50px;
         width: 650px;
