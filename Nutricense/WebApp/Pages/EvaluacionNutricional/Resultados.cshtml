@@ -6,44 +6,72 @@
 <link href="~/css/evaluacionnutricional.css" rel="stylesheet" />
 <script src="~/js/resultados.js"></script>
 
+
+<header class="text-center cabezaPagina">
+    <h2 id="subtituloCabezaPagina">EVALUACION NUTRICIONAL</h2>
+    <P>En está sección vas a poder conocer tu peso ideal, IMC y requerimiento calórico diario</P>
+
+</header>
+
+
 <section class="contenedorResultado">
 
 
-    <h1>
-        Resultados
-    </h1>
-    <p>Resultados de tu evaluacion nutricional</p>
-
 
     <div id="contenedorTabla" class="contenedorFormDatos">
-        <h2 id="nombreCliente">Aqui estan sus resultados</h2>
+        <h2 id="nombreCliente">Resultados de tu evaluacion nutricional</h2>
 
 
 
-
-        <p>Información nutricional</p>
         <table id="tblResultados">
 
             <tr>
                 <td class="tblTitulo">IMC: </td>
-                <td class="tblResultado" id="resultadoIMC"></td>
-                <td class="tblProp" id="estadoIMC"></td>
+                <td class="tblResultado" id="resultadoIMC">50</td>
+                <td class="tblProp" id="estadoIMC">obeso</td>
             </tr>
             <tr>
                 <td class="tblTitulo">Peso ideal: </td>
-                <td class="tblResultado"  id="resultadoPesoIdeal"></td>
+                <td class="tblResultado"  id="resultadoPesoIdeal">50</td>
                 <td class="tblProp">Kg</td>
             </tr>
             <tr>
-                <td class="tblTitulo">Requerimiento calórico: </td>
-                <td class="tblResultado"  id="resultadoRequerimiento"></td>
+                
+                <td class="tblTitulo">Requerimiento <br /> calórico: </td>
+                <td class="tblResultado"  id="resultadoRequerimiento">50</td>
                 <td class="tblProp">kcal</td>
             </tr>
 
 
         </table>
-        <a id="btnVolver" style=" width:100px;         margin: auto; " class="btn btn-primary" asp-page="/EvaluacionNutricional/InformacionPersonal">Volver</a>
+        <button type="button" id="btnVolver" style=" width:100px; " class="btn btn-primary" asp-page="/EvaluacionNutricional/InformacionPersonal">Volver</button>
 
     
     </div>
+</section>
+
+<section class="contenedorInformativo" >
+
+    <div class="contenedorFormDatos">
+
+        <h4>Que resultados encontrarás en esta evaluación?</h4>
+        <h5>IMC:</h5>
+        <p>
+             Es una medida que evalúa la relación entre tu peso y tu altura.
+            
+        </p>
+        <h5>Peso ideal:</h5>
+        <p>El peso ideal es el rango de peso en el cual te encuentras en tu mejor estado de salud.</p>
+        <h5>            Requerimiento calórico:</h5>
+        <p>
+            El requerimiento calórico es la cantidad de calorías que tu cuerpo necesita para mantener sus funciones básicas y tu nivel de actividad diaria. Puede variar según tu edad, género, nivel de actividad física y otros factores.
+        </p>
+
+
+
+
+    </div>
+
+
+
 </section>

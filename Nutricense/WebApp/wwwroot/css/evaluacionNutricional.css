@@ -59,9 +59,6 @@
     border: 1px solid #5a5a5a;
 }
 
-.btnCalculo{
-    margin:40px;
-}
 
 .is-invalid {
    border-color: #ff7851 !important;
@@ -98,10 +95,19 @@
     margin: auto;
     color: #5a5a5a;
     font-size: 25px;
+    font-weight: 500;
+
 }
+    #tblResultados tbody {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
 #estadoIMC {
     line-height: 1;
+    padding-left: 10px !important;
 }
 
 
@@ -135,6 +141,28 @@
     color: var(--verdeOscuro) !important;
 }
 
-.contenedorFormDatos{
-    gap: 10px;
+#nombreCliente{
+    color: var(--negro)
 }
+.contenedorFormDatos {
+    gap: 10px;
+    padding: 30px;
+}
+
+
+.contenedorFormDatos button {
+    margin: auto;
+    margin-top: 40px;
+}
+
+.contenedorInformativo{
+  margin-top: 40px;
+}
+.contenedorInformativo h4{
+    color: var(--verdeOscuro);
+    font-weight: 600;
+}
+
+    .contenedorInformativo h5 {
+        color: var(--negro);
+    }
