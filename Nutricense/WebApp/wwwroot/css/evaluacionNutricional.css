@@ -16,7 +16,6 @@
 .contenedorEvaluacion {
     margin: 40px;
     text-align: center;
-    //background-color: #e4f3ef;
     padding: 0px 40px;
     border-radius: 20px;
 }
@@ -147,6 +146,8 @@
 .contenedorFormDatos {
     gap: 10px;
     padding: 30px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 
