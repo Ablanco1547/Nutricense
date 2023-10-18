@@ -42,13 +42,28 @@
     margin: auto;
 
 }
+.contenidoModal{
+    width: 850px;
+    height: 700px;
+    margin: auto;
+    background-color: #ffffffe2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
 
-.contenedorCards{
+.contenidoModal iframe{
+    margin: 25px 25px 0px;
+}
+    .contenidoModal button {
+        margin: auto;
+        color: var(--verdeOscuro);
+    }
+.contenedorCards {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     gap: 30px 10px;
-
 }
 
 .cardArticulo {
