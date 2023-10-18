@@ -120,7 +120,7 @@ body {
 #busquedaAlimentoInput {
     margin: auto;
     text-align: center;
-    background-color: var(--fondoOscuroTabla);
+    background-color: var(--blanco);
     border: #133C44 1px solid;
     color: var(--negro);
     height: 38px;

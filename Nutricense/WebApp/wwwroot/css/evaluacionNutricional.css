@@ -166,3 +166,11 @@
     .contenedorInformativo h5 {
         color: var(--negro);
     }
+
+
+
+#notaSmall{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 12px;
+}
