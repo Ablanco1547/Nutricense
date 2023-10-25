@@ -13,7 +13,7 @@
     <h1 id="tituloPagina"><span><i class="fa-solid fa-leaf"></i></span> NUTRICENSE</h1>
     <h5 id="subtituloPagina">Información a tu alcance</h5>
     <p>En este sitio web te damos la ayuda necesaria para hacer tu plan de alimentación mas dinámico.</p>
-    <button type="button" class="btn">Ver más</button>
+    <button type="button" class="btn" onClick="document.querySelector('.opcionIndexArticle').scrollIntoView();">Ver más</button>
 </header>
 
 
@@ -25,7 +25,7 @@
            
             <h3>GRUPO DE ALIMENTOS</h3>
             <p>En esta sección puedes buscar cualquier alimento y saber a qué grupo de alimento pertenece y la equivalencia a 1 porción del alimento</p>
-            <button>
+            <button type="button" onClick="window.location.href = '/GrupoAlimentos'">
                 BUSCADOR DE ALIMENTOS
             </button>
         </card>
@@ -46,7 +46,7 @@
 
             <h3>EVALUACION NUTRICIONAL</h3>
             <p>En esta sección puedes buscar cualquier alimento y saber a qué grupo de alimento pertenece y la equivalencia a 1 porción del alimento</p>
-            <button>
+            <button type="button" onClick="window.location.href = '/EvaluacionNutricional/InformacionPersonal'">
                 EVALUACION NUTRICIONAL
             </button>
         </card>
@@ -66,8 +66,8 @@
             <p>
                 En esta sección puedes encontrar articulos de interes nutricional y de alto valor educacional para informarte mas sobre tu alimentacion y dieta diaria
                 </p>
-            
-                <button>
+
+            <button type="button" onClick="window.location.href = '/EducacionNutricional'">
                 EDUCACION NUTRICIONAL
             </button>
         </card>

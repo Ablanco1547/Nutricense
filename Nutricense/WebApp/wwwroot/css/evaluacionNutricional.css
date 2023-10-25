@@ -13,6 +13,11 @@
 }
 
 
+body {
+    background-color: var(--verdePrimario);
+}
+
+
 .contenedorEvaluacion {
     margin: 40px;
     text-align: center;
@@ -189,5 +194,10 @@
     }
     .contenedorInformativo {
         margin: 25px auto;
+    }
+
+
+    .datosPersonales input {
+        font-size:12px;
     }
 }

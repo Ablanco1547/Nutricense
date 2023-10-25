@@ -34,7 +34,7 @@ body{
     background-size:cover;
     /*filter: brightness(50%);*/
     height: 550px;
-    padding: 90px!important;
+    padding: 110px 90px!important;
 }
 
     #tituloIndex h1 {

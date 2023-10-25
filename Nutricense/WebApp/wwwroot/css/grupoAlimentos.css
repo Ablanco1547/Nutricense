@@ -16,6 +16,7 @@
 
 body {
     white-space: normal;
+    background-color:var(--verdePrimario);
 }
 
 
@@ -45,12 +46,13 @@ body {
 }
 
 #contenedorBarraBusqueda{
-    height:200px;
+    height:160px;
 }
 
 #contenedorTabla {
     overflow-y: scroll; /* make the table scrollable if height is more than 200 px  */
-    height: 600px;
+    height: 540px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 #tblAlimentos {
@@ -74,13 +76,13 @@ body {
         color: var(--verdeOscuro);
         padding: 15px;
         position: sticky;
-        top: -20px;
+        top: 0px;
     }
 
         #tblAlimentos thead th {
             padding: 15px !important;
             position: sticky;
-            top: -20px;
+            top: 0px;
         }
 
 
@@ -114,7 +116,7 @@ body {
 
 
 .contenedorFormDatos h4 {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 #busquedaAlimentoInput {
@@ -132,6 +134,7 @@ body {
     gap: 50px;
     width: 1200px;
     margin: auto;
+    border-radius:10px 10px 0px 0px;
 
 }
 
@@ -143,15 +146,24 @@ body {
 
 @media (max-width: 767px) {
     #contenedorAlimentos{
-        margin:25px auto;
+        margin:20px auto;
     }
+
     .contenedorFormDatos{
         width:350px;
         padding:0px;
     }
-
-    #tblAlimentos thead {
-        top:0px;
+        .contenedorFormDatos h4{
+            font-size:16px;
+        }
+        #tblAlimentos thead {
+            top: 0px;
+        }
+    #contenedorBarraBusqueda{
+        height:140px;
+    }
+    #contenedorTabla{
+        height:470px;
     }
 
 }
@@ -312,7 +324,6 @@ body {
         gap: 50px;
         width: 650px;
         margin: auto;
-        padding: 20px;
     }
 
 
@@ -323,7 +334,7 @@ body {
         gap: 50px;
         width: 1000px;
         margin: auto;
-        padding: 20px;
+
     }
 }
 
