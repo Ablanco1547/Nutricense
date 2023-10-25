@@ -175,3 +175,19 @@
     padding-top: 50px;
     font-size: 12px;
 }
+
+/* Mobile */
+
+@media (max-width: 767px){
+    .contenedorEvaluacion{
+        padding: 0px;
+        width:350px;
+        margin:25px auto;
+    }
+    .contenedorFormDatos{
+        padding:10px;
+    }
+    .contenedorInformativo {
+        margin: 25px auto;
+    }
+}

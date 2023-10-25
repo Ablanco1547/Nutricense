@@ -10,6 +10,7 @@
     --grisFondoBloque: #f4f4f4;
     --verdeOscuro: #133C44;
     --montserrat: 'Montserrat', sans-serif;
+    --dorado: #C2B278;
 }
 
 
@@ -22,19 +23,55 @@ body{
     font-size: 4em;
     font-weight: 600;
     color: #133C44;
+
 }
 
 
-
-
-
-#cardsContenedor {
-    display: flex;
-    justify-content: space-around;
-    height: auto;
-    gap: 10px;
-    flex-wrap: wrap;
+#tituloIndex {
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url("../media/maiz.jpg");
+    background-repeat: no-repeat;
+    background-position-x:center;
+    background-size:cover;
+    /*filter: brightness(50%);*/
+    height: 550px;
+    padding: 90px!important;
 }
+
+    #tituloIndex h1 {
+        color: var(--blanco);
+        font-weight:500;
+
+    }
+
+    #tituloIndex h5 {
+        font-weight:300;
+        color: var(--blanco);
+    }
+
+    #tituloIndex p {
+        color: var(--blanco);
+        margin: 50px;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    #tituloIndex button {
+        color: var(--blanco);
+        background-color: var(--dorado);
+        padding: 8px 45px;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+
+
+    #cardsContenedor {
+        display: flex;
+        justify-content: space-around;
+        height: auto;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
 
     #cardsContenedor h2 {
         color: white;
@@ -61,16 +98,16 @@ body{
         color: #133C44;
     }
 
-#cardAlimentos {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6) ), url('../media/grupoAlimentos.jpg');
+#cardEducacion {
+    background: url('../media/person-chalkboard-solid.svg');
+    background-repeat: no-repeat;
     background-position: center;
-    background-size:cover;
 }
 
 #cardEvaluacion {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6) ), url('../media/evaluacionNutricional.jpg');
+    background: url('../media/weight-scale-solid.svg');
+    background-repeat: no-repeat;
     background-position: center;
-    background-size:contain;
 }
 
 
@@ -82,22 +119,24 @@ body{
 }
 
 
+#cardGrupoAlimentos {
+    background: url("../media/wheat-awn-solid.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+}
 
 
-
-.opcionIndexArticle{
+.opcionIndexArticle {
     background-color: var(--verdePrimario);
     display: flex;
     padding: 20px;
-    text-align:center;
-
-
+    text-align: center;
 }
 
     .opcionIndexArticle h3 {
         color: var(--verdeOscuro);
         font-weight: 500;
-        font-size: 2.3em;
+        /*font-size: 2.3em;*/
         white-space: nowrap;
         margin: 0px;
     }
@@ -151,48 +190,155 @@ body{
     flex-direction: row-reverse;
 }
 
-@media (max-width: 1120px) {
+
+
+
+    /* Mobile */
+
+@media (max-width: 767px) {
+    #tituloIndex {
+        background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url("../media/maiz.jpg");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: cover;
+        /*filter: brightness(50%);*/
+        height: 300px;
+        padding: 30px !important;
+    }
+
+        #tituloIndex p {
+            margin: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        #tituloIndex button {
+            color: var(--blanco);
+            background-color: var(--dorado);
+            padding: 8px 45px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
     #tituloPagina {
         font-size: 46px;
     }
+
+
+
+
     .opcionIndexArticle {
         background-color: var(--verdePrimario);
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column-reverse !important;
         padding: 20px;
         text-align: center;
     }
+
         .opcionIndexArticle aside {
             padding: 0px;
             width: 100%;
         }
+
     .imgCardIndex {
         width: 280px;
         margin: auto;
         display: flex;
     }
 
-        .opcionIndexArticle h3 {
-            font-size: 20px;
-            white-space:nowrap;
-            font-weight: 600;   
-        }
+    .opcionIndexArticle h3 {
+        font-size: 20px;
+        white-space: nowrap;
+        font-weight: 600;
+    }
 
-        .opcionIndexArticle card {
-            display: flex;
-            flex-direction: column;
-            padding: 15px;
-            gap: 25px;
-            max-width: 100%;
-        }
+    .opcionIndexArticle card {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        gap: 25px;
+        max-width: 100%;
+    }
 
-        .opcionIndexArticle button {
-            font-size: 16px;
-            white-space: nowrap;
-        }
+    .opcionIndexArticle button {
+        font-size: 12px;
+        white-space: nowrap;
+    }
 
     .fondoBlanco {
         background-color: var(--blanco);
         flex-direction: column-reverse;
     }
 }
+
+
+
+
+    /* Small tablets */
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .opcionIndexArticle aside{
+            display:flex;
+        }
+        #tituloIndex p {
+            color: var(--blanco);
+            margin: 50px;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        #tituloIndex button {
+            color: var(--blanco);
+            background-color: var(--dorado);
+            padding: 8px 45px;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .opcionIndexArticle aside img {
+            max-width: 300px;
+            margin: auto;
+            display: flex;
+        }
+        .opcionIndexArticle h3 {
+
+            font-size: 1.4em;
+            white-space: nowrap;
+            margin: 0px;
+        }
+
+        .opcionIndexArticle p {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: var(--negro);
+            margin: auto;
+            margin-bottom: 0px;
+            max-width: 90%;
+        }
+
+        .opcionIndexArticle button {
+            background-color: var(--verdeOscuro);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 30px;
+            margin: auto;
+            margin-top: 0px;
+            font-size: 1em;
+            white-space: nowrap;
+        }
+
+    }
+
+
+    /* Large tablets/laptops */
+    @media (min-width: 992px) and (max-width: 1199px) {
+    }
+
+    /* Desktops */
+
+    @media (min-width: 1200px) and (max-width: 1919px) {
+    }
+    /* Extra large screens */
+    @media (min-width: 1926px) {
+    }

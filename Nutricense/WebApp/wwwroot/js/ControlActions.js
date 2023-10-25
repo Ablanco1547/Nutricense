@@ -1,7 +1,7 @@
 
 function ControlActions() {
 
-	this.URL_API = "https://localhost:7056/api/";
+	this.URL_API = "https://nutricense-api.azurewebsites.net/api/";
 
 	this.GetUrlApiService = function (service) {
 		return this.URL_API + service;

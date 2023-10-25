@@ -139,11 +139,26 @@ body {
     color: var(--verdeOscuro) !important;
 }
 
+/* Mobile */
+
+@media (max-width: 767px) {
+    #contenedorAlimentos{
+        margin:25px auto;
+    }
+    .contenedorFormDatos{
+        width:350px;
+        padding:0px;
+    }
+
+    #tblAlimentos thead {
+        top:0px;
+    }
+
+}
 
 @media (min-width: 300px) and (max-width: 401px) {
     .contenedorFormDatos {
         gap: 50px;
-        width: 300px;
         margin: auto;
         padding: 1px;
     }
@@ -195,7 +210,7 @@ body {
 @media (min-width: 601px) and (max-width: 690px) {
     .contenedorFormDatos {
         gap: 50px;
-        width: 350px;
+
         margin: auto;
         padding: 5px;
     }
@@ -221,9 +236,8 @@ body {
 @media (min-width: 402px) and (max-width: 600px) {
     .contenedorFormDatos {
         gap: 50px;
-        width: 350px;
+
         margin: auto;
-        padding: 5px;
     }
 
 
