@@ -9,7 +9,7 @@ namespace DTOs
     public class Cliente : BaseDTO
     {
         public string Nombre { get; set; }
-        public string Correo { get; set; }
+        public string? Correo { get; set; }
         public string? Telefono { get; set; }
 
         public DateTime FechaNacimiento { get; set; }
