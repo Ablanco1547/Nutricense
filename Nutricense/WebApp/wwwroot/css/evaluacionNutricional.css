@@ -10,6 +10,7 @@
     --verdeDiluido: #b3d7cc;
     --fondoClaroTabla: #EBEBEB;
     --fondoOscuroTabla: #D9D9D9;
+
 }
 
 
@@ -17,6 +18,22 @@ body {
     background-color: var(--verdePrimario);
 }
 
+.cabezaPagina {
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url("../media/Scale.jpg");
+    background-repeat: no-repeat;
+    /* background-position-x:top;*/
+    background-position-y: 70%;
+    background-size: cover;
+    /*filter: brightness(50%);*/
+    height: 189px;
+    padding: 50px !important;
+    color: var(--blanco) !important;
+}
+
+#subtituloCabezaPagina {
+    color: var(--blanco) !important;
+    font-weight: 400 !important;
+}
 
 .contenedorEvaluacion {
     margin: 40px;
@@ -30,13 +47,16 @@ body {
 }
 
 
+#contenedorTabla h3{
+    color:var(--verdeOscuro);
+}
+
 
 .datosPersonales {
     text-align: left;
     display: flex;
     flex-direction: row;
     gap: 30px;
-
 }
 
 
@@ -80,73 +100,10 @@ body {
     /*gap: 40px;*/
 
 }
-.tblTitulo {
-    line-height:0.9;
-    font-weight:500;
-    text-align:end;
-    width:340px;
-    padding-right:10px
-
-}
-.tblProp {
-    text-align: start;
-    width: 340px;
-    padding-left: 0px
-}
-
-#tblResultados {
-    line-height: 2;
-    margin: auto;
-    color: #5a5a5a;
-    font-size: 25px;
-    font-weight: 500;
-
-}
-    #tblResultados tbody {
-
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-#estadoIMC {
-    line-height: 1;
-    padding-left: 10px !important;
-}
-
-
-/*#contenedorTabla {
-    background-color: rgba(0,0,0,.075);
-    border-radius: 10px;
-    padding: 50px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-
-
-    #contenedorTabla h2 {
-        color: #133C44;
-        font-weight:600;
-
-    }
-
-#contenedorTabla p{
-    margin:-10px 0px;
-}*/
-
-#tblResultados tr {
-    padding: 10px;
-    border-bottom: 1px solid #c2c2c2;
-}
-
-#subtituloCabezaPagina, .cabezaPagina {
-    color: var(--verdeOscuro) !important;
-}
 
 #nombreCliente{
-    color: var(--negro)
+    color: var(--negro);
+    margin-top:10px;
 }
 .contenedorFormDatos {
     gap: 10px;
@@ -162,7 +119,8 @@ body {
 }
 
 .contenedorInformativo{
-  margin-top: 40px;
+  margin: 40px;
+
 }
 .contenedorInformativo h4{
     color: var(--verdeOscuro);
@@ -181,10 +139,39 @@ body {
     font-size: 12px;
 }
 
-/* Mobile */
+.resultadoCardsContenedor {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap:40px;
+}
 
-@media (max-width: 767px){
-    .contenedorEvaluacion{
+    .resultadoCardsContenedor h4{
+        color: var(--verdeOscuro);
+        font-size:1.9rem;
+    }
+
+    .resultadoCardsContenedor card{
+        width: 50%;
+    }
+
+    .resultadoCardsContenedor h5{
+
+        color:var(--negro);
+        font-weight:500;
+        font-size:1.7rem;
+
+
+    }
+
+
+
+
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        .contenedorEvaluacion{
         padding: 0px;
         width:350px;
         margin:25px auto;
@@ -200,4 +187,11 @@ body {
     .datosPersonales input {
         font-size:12px;
     }
+
+
+
+
+        .resultadoCardsContenedor card {
+            width: 100%;
+        }
 }

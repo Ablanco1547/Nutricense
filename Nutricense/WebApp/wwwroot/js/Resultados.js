@@ -25,13 +25,11 @@ function EvaluacionController() {
         
         nombreCliente.innerHTML = `${objCliente.Nombre} ${objCliente.Apellidos}`
 
-        resultadoIMC.innerHTML = `${objCliente.IMC} `;
+        resultadoIMC.innerHTML = `${objCliente.IMC} kg/m2 - ${objCliente.EstadoIMC} `;
 
-        resultadoPesoIdeal.innerHTML = `${objCliente.PesoIdealImc} `;
+        resultadoPesoIdeal.innerHTML = `${objCliente.PesoIdealImc} kgs `;
 
-        resultadoRequerimiento.innerHTML = `${objCliente.VetMifflin} `;
-
-        estadoIMC.innerHTML = `${objCliente.EstadoIMC} `;
+        resultadoRequerimiento.innerHTML = `${objCliente.VetMifflin} kcal `;
 
         btnVolver.addEventListener('click', function () {
 

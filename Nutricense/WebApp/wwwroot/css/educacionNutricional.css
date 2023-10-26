@@ -10,8 +10,27 @@
     --verdeDiluido: #b3d7cc;
     --fondoClaroTabla: #EBEBEB;
     --fondoOscuroTabla: #D9D9D9;
+    --verdeContenedor: #ebf6f3;
+}
+body{
+    background-color:var(--verdePrimario)
+}
+.cabezaPagina {
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url("../media/nutritionistPC.jpg");
+    background-repeat: no-repeat;
+    /* background-position-x:top;*/
+    background-position-y: 50%;
+    background-size: cover;
+    /*filter: brightness(50%);*/
+    height: 189px;
+    padding: 50px !important;
+    color: var(--blanco) !important;
 }
 
+#subtituloCabezaPagina {
+    color: var(--blanco) !important;
+    font-weight: 400 !important;
+}
 #contenedorEducacion {
     display: flex;
     flex-direction: column;
@@ -67,7 +86,7 @@
 }
 
 .cardArticulo {
-    background-color: var(--fondoOscuroTabla);
+    background-color: var(--verdeContenedor);
     padding: 40px;
     max-width: 350px;
     border-radius: 15px;
@@ -92,13 +111,10 @@
     display: block;
 }
 
-#subtituloCabezaPagina, .cabezaPagina {
-    color: var(--verdeOscuro) !important;
-}
 
-
-.contenedorFormDatos{
+.contenedorFormDatos {
     padding: 40px;
     width: 90%;
-    margin-top:40px!important;
+    margin-top: 40px !important;
+    background-color: #ebf6f34f;
 }

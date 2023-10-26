@@ -19,8 +19,24 @@ body {
     background-color:var(--verdePrimario);
 }
 
+.cabezaPagina {
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url("../media/Cas.jpg");
+    background-repeat: no-repeat;
+    /* background-position-x:top;*/
+    background-position-y: 50%;
+    background-size: cover;
+    /*filter: brightness(50%);*/
+    height: 189px;
+    padding: 50px !important;
+    color: var(--blanco) !important;
+}
 
-#contenedorAlimentos{
+#subtituloCabezaPagina {
+    color: var(--blanco) !important;
+    font-weight: 400 !important;
+}
+
+#contenedorAlimentos {
     margin: 40px;
     text-align: center;
 }
@@ -138,9 +154,7 @@ body {
 
 }
 
-#subtituloCabezaPagina, .cabezaPagina {
-    color: var(--verdeOscuro) !important;
-}
+
 
 /* Mobile */
 

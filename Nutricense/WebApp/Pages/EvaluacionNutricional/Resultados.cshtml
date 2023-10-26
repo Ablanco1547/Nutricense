@@ -19,31 +19,43 @@
 
 
     <div id="contenedorTabla" class="contenedorFormDatos">
-        <h2 id="nombreCliente">Resultados de tu evaluacion nutricional</h2>
+        <h3 >Resultados de tu evaluacion nutricional</h3>
+        <h4 id="nombreCliente"></h4>
 
 
 
-        <table id="tblResultados">
+        <div class="resultadoCardsContenedor">
 
-            <tr>
-                <td class="tblTitulo">IMC: </td>
-                <td class="tblResultado" id="resultadoIMC">50</td>
-                <td class="tblProp" id="estadoIMC">obeso</td>
-            </tr>
-            <tr>
-                <td class="tblTitulo">Peso ideal: </td>
-                <td class="tblResultado"  id="resultadoPesoIdeal">50</td>
-                <td class="tblProp">Kg</td>
-            </tr>
-            <tr>
-                
-                <td class="tblTitulo">Requerimiento <br /> calórico: </td>
-                <td class="tblResultado"  id="resultadoRequerimiento">50</td>
-                <td class="tblProp">kcal</td>
-            </tr>
+            <card id="resultadoIMCCard">
+                 <h4>IMC</h4>
+                <h5 id="resultadoIMC">50 kg/m2 - Sobrepeso</h5>
+                <p>
+                    El indice de masa corporal (IMC) evalúa la relación entre tu peso y tu altura.
+                </p>
+
+            </card>
+            <card id="resultadoPIdeal">
+                <h4>Peso ideal</h4>
+                <h5 id="resultadoPesoIdeal">50kg</h5>
+                <p>
+                    El peso ideal es el rango de peso en el cual te encuentras en tu mejor estado de salud.
+                </p>
+
+            </card>
+
+            <card id="resultadoRCalorico">
+                <h4>Requerimiento calórico</h4>
+                <h5 id="resultadoRequerimiento">1200 kcal</h5>
+                <p>
+                    El requerimiento calórico es la cantidad de calorías que tu cuerpo necesita para mantener sus funciones básicas y tu nivel de actividad diaria.
+                </p>
+
+            </card>
 
 
-        </table>
+        </div>
+
+
         <button type="button" id="btnVolver" style=" width:100px; " class="btn btn-primary" asp-page="/EvaluacionNutricional/InformacionPersonal">Volver</button>
 
     

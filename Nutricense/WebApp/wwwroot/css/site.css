@@ -8,6 +8,7 @@
     --montserrat: 'Montserrat', sans-serif;
     --fondoBloque: #f4f4f4;
     --verdeDiluido: #b3d7cc;
+    --verdeContenedor: #ebf6f3;
 }
 
 html {
@@ -51,7 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    background-color: var(--fondoBloque);
+    background-color: var(--verdeContenedor);
     border-radius: 10px;
 }
 
