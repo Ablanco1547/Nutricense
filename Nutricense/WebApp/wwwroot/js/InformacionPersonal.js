@@ -34,14 +34,14 @@ function EvaluacionController() {
 
 
 
-            let camposAValidar = document.querySelectorAll('input');
+            let camposAValidar = document.querySelectorAll('.requerido');
             let selectsAValidar = document.querySelectorAll('select');
-            let emailAValidar = document.querySelector('#inputCorreo');
+            //let emailAValidar = document.querySelector('#inputCorreo');
 
 
             let validado = this.validarVacios(camposAValidar);
             let selectValidado = this.validarVacios(selectsAValidar);
-            let emailValidado = this.validarEmail(emailAValidar)
+            //let emailValidado = this.validarEmail(emailAValidar)
 
 
             if (!validado || !selectValidado) {
@@ -51,14 +51,14 @@ function EvaluacionController() {
                     text: 'Llenar todos los campos',
                     showCloseButton: true
                 });
-            } else if (!emailValidado) {
+            } /*else if (!emailValidado) {
                 Swal.fire({
                     icon: 'error',
                     title: 'El formato del email debe ser correcto',
                     text: 'El email debe seguir el siguiente formato: ejemplo@ejemplo.com',
                     showCloseButton: true
                 });
-            } else {
+            } */else {
                 localStorage.setItem('objnosuscrito', JSON.stringify(objCliente))
                 sessionStorage.setItem('evaluacionAccess',true)
                 window.location.href = "medidas";
