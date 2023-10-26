@@ -38,3 +38,15 @@ window.onclick = function (event) {
     }
 }
 
+let btnCerrar = document.querySelectorAll('.btnCerrar');
+
+btnCerrar.forEach(btn => {
+
+    btn.onclick = function (event) {
+            grupoAlimentosMdl.style.display = "none";
+            beneficiosMdl.style.display = "none";
+            recomendacionesMdl.style.display = "none";
+
+    }
+
+})
