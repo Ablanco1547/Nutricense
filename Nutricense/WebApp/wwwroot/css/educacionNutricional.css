@@ -118,3 +118,26 @@ body{
     margin-top: 40px !important;
     background-color: #ebf6f34f;
 }
+
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+
+}
+
+
+
+
+@media (max-width: 850px) {
+    .contenidoModal {
+        width: 80%;
+        height: 80%;
+    }
+
+        .contenidoModal iframe {
+            width: 90%;
+            height: 90%;
+        }
+}

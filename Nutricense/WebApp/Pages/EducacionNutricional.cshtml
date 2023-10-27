@@ -2,6 +2,7 @@
 @model WebApp.Pages.EducacionNutricionalModel
 @{
 }
+<!DOCTYPE html>
 <link href="~/css/educacionnutricional.css" rel="stylesheet" />
 
 
@@ -20,9 +21,10 @@
     <div id="grupoAlimentosMdl" class="contenedorModal" >
         <div class="contenidoModal">
 
-            <iframe style="border: 0" width="800" height="600" src="/media/pdf/grupoAlimentos.pdf#toolbar=0"></iframe>
+            <img src="/media/Presentaciones/GrupoAlimentos.jpg"/>
 
             <button type="button" id="btncerrar1" class="btn btn-secondary btnCerrar">Cerrar</button>
+
         </div>
 
     </div>
@@ -30,7 +32,7 @@
     <div id="beneficiosMdl" class="contenedorModal">
         <div class="contenidoModal">
 
-            <iframe title="PDF DE IMAGEN" style="border: 0" width="800" height="600" src="/media/pdf/beneficiosEjercicio.pdf#view=fitH&toolbar=0"></iframe>
+            <iframe title="PDF DE IMAGEN" style="border: 0" width="800" height="600" src="/media/pdf/beneficiosEjercicio.pdf#view=fitH"></iframe>
 
             <button type="button" class="btn btn-secondary btnCerrar">Cerrar</button>
         </div>
@@ -40,7 +42,7 @@
     <div id="recomendacionesMdl" class="contenedorModal">
         <div class="contenidoModal">
 
-            <iframe style="border: 0" width="800" height="600" src="/media/pdf/recomendacionDiaraFibra.pdf#toolbar=0"></iframe>
+            <iframe style="border: 0" width="800" height="600" src="/media/pdf/recomendacionDiaraFibra.pdf#view=fitH"></iframe>
 
             <button type="button" class="btn btn-secondary btnCerrar">Cerrar</button>
         </div>
