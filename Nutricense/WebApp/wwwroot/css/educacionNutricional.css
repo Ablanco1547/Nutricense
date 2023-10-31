@@ -62,14 +62,27 @@ body{
 
 }
 .contenidoModal {
-    width: 850px;
-    height: 700px;
+    width: 870px;
+    height: 720px;
     margin: auto;
     background-color: #ffffffe2;
-    /*display: flex;
-    flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     border-radius: 15px;
+    padding: 20px;
+
 }
+
+    .contenidoModal h3{
+        color:black;
+    }
+    .imgContainer {
+        margin: auto;
+        overflow: auto;
+        width: 90%;
+        height: 90%;
+    }
 
 .contenidoModal iframe{
     margin: 25px 25px 0px;
@@ -96,7 +109,12 @@ body{
 }
 .cardArticulo img {
     width: 250px;
+
 }
+
+    .cardArticulo img:hover {
+        cursor:pointer;
+    }
     .cardArticulo h6 {
         color: var(--negro);
         font-size: 16px;
@@ -140,4 +158,11 @@ body{
             width: 90%;
             height: 90%;
         }
+
+    .imgContainer img{
+        margin: auto;
+        overflow: auto;
+        width: 100%;
+        height: auto;
+    }
 }
